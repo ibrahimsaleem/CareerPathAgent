@@ -3,7 +3,7 @@ import logging
 import time
 import os
 from pathlib import Path
-import google.generativeai as genai
+from google import genai
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s")
