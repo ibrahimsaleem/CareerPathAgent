@@ -1,0 +1,87 @@
+Main Node: Data Analyst
+
+Introduction
+1.1. Types of Data Analytics
+    • Descriptive Analytics
+    • Diagnostic Analytics
+    • Predictive Analytics
+    • Prescriptive Analytics
+1.2. Key Concepts of Data
+    • Collection
+    • Cleanup
+    • Exploration
+    • Visualization
+    • Statistical Analysis
+    • Machine Learning
+
+Building a Strong Foundation
+2.1. Analysis / Reporting with Excel
+    – Common Functions:
+      • IF
+      • DATEDIF
+      • VLOOKUP / HLOOKUP
+      • REPLACE / SUBSTITUTE
+      • UPPER / LOWER / PROPER
+      • CONCAT, TRIM
+      • AVERAGE, COUNT, SUM, MIN / MAX
+    – Charting
+    – Pivot Tables
+2.2. Learn a Programming Language
+    • R
+    • Python
+    • SQL
+2.3. Data Manipulation Libraries
+    • Pandas (Python)
+    • dplyr (R)
+2.4. Data Visualization Libraries
+    • Matplotlib
+    • ggplot2
+
+Mastering Data Handling
+3.1. Data Collection
+    • Databases
+    • CSV Files
+    • APIs
+    • Web Scraping
+3.2. Data Cleanup
+    • Handling Missing Data
+    • Removing Duplicates
+    • Finding Outliers
+    • Data Transformation (with Pandas or dplyr)
+
+Data Analysis Techniques
+4.1. Descriptive Analysis
+    – Visualizing Distributions
+    – Dispersion, Central Tendency, Variance, Standard Deviation, Skewness, Kurtosis
+4.2. Data Visualization
+    – Bar Charts, Line Charts, Scatter Plots, Funnel Charts
+    – Histograms, Stacked Charts, Heatmaps, Pie Charts
+4.3. Statistical Analysis
+    • Hypothesis Testing
+    • Correlation Analysis
+    • Regression
+
+Advanced Topics
+5.1. Machine Learning
+    • Supervised Learning
+    • Unsupervised Learning
+    • Reinforcement Learning
+    • Popular Algorithms:
+      – Decision Trees
+      – Naive Bayes
+      – K‑Means Clustering
+      – Model Evaluation Techniques
+5.2. Big Data Technologies
+    • Big Data Concepts
+    • Data Processing Frameworks: Hadoop, Spark
+    • Parallel Processing & Techniques: MPI, MapReduce
+5.3. Deep Learning (Optional)
+    • Neural Networks, CNNs, RNNs
+    • Frameworks: TensorFlow, PyTorch
+    • Practice: Image Recognition, NLP
+
+Portfolio & Continuous Learning
+    • Build real projects (e.g., sales‑trend prediction, customer segmentation)
+    • Participate in Kaggle competitions
+    • Take online courses & certifications (Coursera, edX, Udemy, DataCamp)
+    • Join communities, attend webinars, network and seek mentorship

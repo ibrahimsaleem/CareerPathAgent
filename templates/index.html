@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>CareerPath AI</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+  </head>
+  <body>
+    <div class="bg-career-pattern"></div>
+    <div class="container">
+      <header>
+        <h1>CareerPath AI: Personalized Roadmap Advisor</h1>
+        <div class="intro">
+          <p>
+            Hi, I'm <strong>Mohammad Ibrahim Saleem</strong>—I built this AI‑powered tool to guide your journey into the world of certifications and career paths. Tell us your current experience, interests, and timeline, and we'll generate a personalized roadmap for your chosen field.
+          </p>
+          <p>
+            CareerPath AI creates tailored roadmaps and provides clear learning paths for any subject—be it Cybersecurity, AI Engineering, Data Analysis, or more. First, create your custom plan above, then dive in and start learning!
+          </p>
+        </div>
+      </header>
+
+      <form id="advisor-form" action="javascript:void(0);">
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="name">Your Name (optional)</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name">
+          </div>
+
+          <div class="form-group">
+            <label for="age">Your Age (optional)</label>
+            <input type="number" id="age" name="age" placeholder="Enter your age">
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="topic">Select Topic for Road Map</label>
+          <select id="topic" name="topic">
+            <option value="cybersecurity">Cybersecurity</option>
+            <option value="ai-engineering">AI Engineer</option>
+            <option value="data-analysis">Data Analysis</option>
+          </select>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="experience">Experience Level</label>
+            <select id="experience" name="experience">
+              <option value="beginner">Beginner (0–1 year)</option>
+              <option value="intermediate">Intermediate (1–3 years)</option>
+              <option value="advanced">Advanced (3+ years)</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="current_certs">Current Certifications</label>
+            <input type="text" id="current_certs" name="current_certs" placeholder="e.g. Security+, CCNA, AWS ML Engineer">
+          </div>
+        </div>
+
+        <div class="form-grid">
+          <div class="form-group">
+            <label for="interest">Area(s) of Interest</label>
+            <input type="text" id="interest" name="interest" placeholder="e.g. Cloud Security, AI Security, Pentesting">
+          </div>
+
+          <div class="form-group">
+            <label for="timeframe">Timeframe</label>
+            <select id="timeframe" name="timeframe">
+              <option value="3 months">3 months</option>
+              <option value="6 months">6 months</option>
+              <option value="12 months">12 months</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="progress-bar">
+          <div class="progress-fill" id="form-progress" style="width: 0%"></div>
+        </div>
+
+        <div class="btn-container">
+          <button type="submit" class="btn">Get My Roadmap <span class="btn-icon">→</span></button>
+        </div>
+      </form>
+
+      <div id="output"></div>
+
+      <!-- Dynamic Learn Roadmap Button -->
+      <div class="btn-container" id="learn-roadmap-container">
+        <a id="learn-roadmap-link" href="{{ url_for('static', filename='cybersecurity.html') }}" class="btn">Learn Cybersecurity Through Roadmap</a>
+      </div>
+
+      <!-- Explanation Modal structure -->
+      <div id="explanation-modal">
+        <div>
+          <span id="modal-close">&times;</span>
+          <div id="modal-content">
+            <!-- Explanation content will be injected here -->
+          </div>
+        </div>
+      </div>
+
+      <script>
+        // Update progress bar as form is filled out
+        const formInputs = document.querySelectorAll('input, select');
+        const progressBar = document.getElementById('form-progress');
+        
+        function updateProgressBar() {
+          let filledCount = 0;
+          formInputs.forEach(input => {
+            if (input.value.trim() !== '') {
+              filledCount++;
+            }
+          });
+          const progress = (filledCount / formInputs.length) * 100;
+          progressBar.style.width = progress + '%';
+        }
+        
+        formInputs.forEach(input => {
+          input.addEventListener('input', updateProgressBar);
+        });
+        
+        // Update Learn Roadmap button based on topic selection
+        const topicSelect = document.getElementById('topic');
+        const learnLink = document.getElementById('learn-roadmap-link');
+        
+        function updateLearnLink() {
+          const topic = topicSelect.value;
+          let link = '', btnText = '';
+          if (topic === 'cybersecurity') {
+            link = "{{ url_for('static', filename='cybersecurity.html') }}";
+            btnText = "Learn Cybersecurity Through Roadmap";
+          } else if (topic === 'ai-engineering') {
+            link = "{{ url_for('static', filename='aiengineer.html') }}";
+            btnText = "Learn AI Engineering Through Roadmap";
+          } else if (topic === 'data-analysis') {
+            link = "{{ url_for('static', filename='datascience.html') }}"; // Ensure this file exists
+            btnText = "Learn Data Analysis Through Roadmap";
+          }
+          learnLink.href = link;
+          learnLink.textContent = btnText;
+        }
+        
+        topicSelect.addEventListener('change', updateLearnLink);
+        updateLearnLink();
+
+        // Form submission handler
+        document.getElementById('advisor-form').addEventListener('submit', async function(e){
+          e.preventDefault();
+          const data = new URLSearchParams(new FormData(this)).toString();
+          const btn = this.querySelector('button');
+          const out = document.getElementById('output');
+          btn.disabled = true;
+          out.innerHTML = '<div class="loading"></div>';
+          
+          try {
+            const res = await fetch('/recommend?' + data);
+            const html = await res.text();
+            setTimeout(() => {
+              out.innerHTML = `
+                <div class="roadmap-header">Your Personalized Roadmap</div>
+                <div class="roadmap-content">${html}</div>
+              `;
+              const phases = document.querySelectorAll('.roadmap-phase');
+              phases.forEach((phase, index) => {
+                setTimeout(() => {
+                  phase.classList.add('highlight-section');
+                }, index * 200);
+              });
+            }, 800);
+          } catch(err) {
+            out.innerHTML = `
+              <div class="roadmap-header" style="background: linear-gradient(to right, #e63946, #e76f51);">Error</div>
+              <div class="roadmap-content">
+                <p style="color: #e63946;">An error occurred: ${err}</p>
+                <p>Please try again or contact support if the problem persists.</p>
+              </div>
+            `;
+          } finally {
+            btn.disabled = false;
+          }
+        });
+        
+        // Modal functionality
+        document.getElementById('modal-close').addEventListener('click', () => {
+          document.getElementById('explanation-modal').style.display = 'none';
+        });
+        
+        function openExplanationModal() {
+          const modal = document.getElementById('explanation-modal');
+          document.getElementById('modal-content').innerHTML = `
+            <div class="loading"></div>
+            <p style="text-align: center; margin-top: 20px;">Loading your personalized explanation...</p>
+          `;
+          modal.style.display = 'block';
+        }
+        
+        // Attach click handlers to SVG nodes once they're loaded
+        document.addEventListener('DOMContentLoaded', function() {
+          document.querySelectorAll('g[data-title]').forEach(node => {
+            node.addEventListener('click', async () => {
+              openExplanationModal();
+              const title = node.getAttribute('data-title');
+              const topic = topicSelect.value;
+              
+              try {
+                const res = await fetch(`/explain-node?title=${encodeURIComponent(title)}&topic=${encodeURIComponent(topic)}`);
+                const html = await res.text();
+                setTimeout(() => {
+                  const parser = new DOMParser();
+                  const doc = parser.parseFromString(html, 'text/html');
+                  const fragment = doc.querySelector('#explanation');
+                  if (fragment) {
+                    document.getElementById('modal-content').innerHTML = fragment.innerHTML;
+                  } else {
+                    document.getElementById('modal-content').innerHTML = html;
+                  }
+                }, 600);
+              } catch (e) {
+                document.getElementById('modal-content').innerHTML = '<p style="color: #e63946; text-align: center;">Error loading explanation. Please try again.</p>';
+              }
+            });
+          });
+        });
+        
+        // Close modal when clicking outside of it
+        window.onclick = function(event) {
+          const modal = document.getElementById('explanation-modal');
+          if (event.target == modal) {
+            modal.style.display = 'none';
+          }
+        }
+      </script>
+    </div>
+  </body>
+</html>

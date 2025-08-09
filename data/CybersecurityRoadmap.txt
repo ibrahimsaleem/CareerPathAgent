@@ -1,0 +1,75 @@
+🛡️ Cybersecurity Roadmap (2025 Update)
+Welcome to the Cybersecurity Roadmap (Updated for 2025)! This guide is designed to help you navigate your journey into the exciting and ever-evolving field of cybersecurity – covering everything from foundational knowledge to practical experience, certifications, and emerging career paths. We’ve refreshed the roadmap to reflect the latest industry trends as of 2025, including new certifications, tools (like AI-driven platforms), and job roles in high demand. Whether you’re just starting out or looking to advance your career, this roadmap provides a logical progression from beginner to advanced topics, with plenty of resources along the way. Let’s dive in and build a secure world together! 🚀
+________________________________________
+📑 Table of Contents
+1.	Foundation
+2.	Fundamentals
+3.	Specialization
+4.	Practical Experience
+5.	Continuous Learning
+6.	YouTube Channels
+7.	Job Roles
+8.	Improving Cybersecurity Skills
+9.	Finding a Job
+10.	Certifications
+11.	6-Month Cybersecurity Roadmap
+________________________________________
+🌱 Foundation
+To start your cybersecurity journey, begin with a solid understanding of networking, operating systems, and basic IT concepts. These foundational skills will help you understand how computers and networks communicate – knowledge essential for keeping systems safe and secure.
+•	Networking Basics – Learn how devices share data and connect through networks.
+•	Operating System Fundamentals 🖥️ – Understand how operating systems work, which is important for system security.
+•	Introduction to Cybersecurity – Start with the basics of cybersecurity and learn why it matters.
+•	CompTIA Network+ Certification – Covers essential networking concepts and validates your knowledge.
+•	Linux Essentials – Learn the basics of Linux, a popular operating system in cybersecurity.
+•	Cisco Networking Academy – Free courses on networking and basic security from Cisco experts.
+•	TCP/IP Networking – Understand the core protocols that power the internet and most networks.
+•	CompTIA Security+ (SY0-701) – An entry-level security certification that provides a well-rounded introduction to key security concepts.
+•	Virtualization Basics ☁️ – Learn how virtual machines work, which is useful for safely testing and running different systems.
+________________________________________
+📚 Fundamentals
+After covering the foundations, it’s time to build core cybersecurity knowledge. This includes understanding security best practices, common tools, and threat concepts that professionals use to protect systems and data.
+Essential Topics to Explore:
+•	Security Fundamentals and Best Practices – CIA triad; best practices.
+•	Basic Security Tools and Technologies – firewalls, antivirus, SIEM, etc.
+•	Introduction to Security Tools – Wireshark, Nmap, Metasploit.
+•	Cybersecurity Basics for Beginners – cryptography, authentication, policies.
+•	Introduction to Ethical Hacking – penetration testing steps and tools.
+•	Common Security Vulnerabilities – OWASP Top 10, misconfigurations.
+•	Cybersecurity Frameworks – NIST CSF, ISO 27001.
+•	Data Privacy Fundamentals – GDPR/CCPA basics.
+•	🤖 AI and Automation in Security – AI in SOC, automated testing assistants.
+________________________________________
+🎯 Specialization
+Popular paths and example certs:
+•	Network Security – Security+, Cisco CyberOps Associate
+•	Penetration Testing – CEH, OSCP
+•	Incident Response – GCIH, ECIH
+•	Security Management – CISM, GIAC (GCSA/GCIH)
+•	Auditing & Compliance – CISA, ISO 27001 Lead Auditor
+•	Security Architecture – CISSP, SABSA
+•	Cloud Security – CCSP, AWS Security Specialty
+•	Application Security – CASE, GWAPT
+Note: AI/ML Security and DevSecOps are growing specialties.
+________________________________________
+🔧 Practical Experience
+TryHackMe, Hack The Box, OverTheWire, VulnHub, Cybrary Labs. Build a home lab (VMs, cloud free tiers). Document projects and labs.
+________________________________________
+🔄 Continuous Learning
+Follow news, podcasts, blogs, threat intel feeds, communities, social media, and conferences/webinars.
+________________________________________
+🎥 YouTube Channels
+Cybrary, Hak5, Professor Messer, The Cyber Mentor, John Hammond, freeCodeCamp, NetworkChuck, Security Weekly, more.
+________________________________________
+💼 Job Roles
+Overview of roles (Network Security Engineer, Penetration Tester, SOC Analyst, Consultant, Architect, CISO, etc.) and salary ranges vary by region.
+________________________________________
+🎓 Certifications
+Entry: ISC2 CC, Security+, CCST. Intermediate/Advanced: CISSP, SecurityX (CASP+), CISM, CCSP, OSCP/CPENT, GIAC, CRISC. Vendor-specific cloud security certs.
+________________________________________
+📅 6-Month Cybersecurity Roadmap
+Month 1–2: Foundations (intro courses, networking, Linux, Security+ domains). 
+Month 3: Hands-on + specialization teaser. 
+Month 4: Certification + capstone project. 
+Month 5: Advanced topic + CTF. 
+Month 6: Job prep (portfolio, interviews), continue learning.
+

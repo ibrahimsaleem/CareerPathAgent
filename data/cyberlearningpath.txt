@@ -1,0 +1,163 @@
+**Cybersecurity Learning Path**  
+
+1. **Cyber Security Starts Here…**
+
+2. **Fundamental IT Skills**  
+   - Computer Hardware Components  
+   - Connection Types & Their Function  
+     - NFC  
+     - WiFi  
+     - Bluetooth  
+     - Infrared  
+   - OS‑Independent Troubleshooting  
+   - Basics of Popular Suites  
+     - MS Office Suite  
+     - Google Suite  
+     - iCloud  
+   - Basics of Computer Networking  
+
+3. **Hands‑On Practice (CTFs)**  
+   - HackTheBox  
+   - TryHackMe  
+   - VulnHub  
+   - picoCTF  
+   - SANS Holiday Hack Challenge  
+
+4. **Certifications**  
+   - *Beginner*  
+     - CompTIA A+  
+     - CompTIA Linux+  
+     - CompTIA Network+  
+   - *Associate*  
+     - CCNA  
+   - *Foundations*  
+     - CompTIA Security+  
+   - *Advanced*  
+     - CEH  
+     - CISA  
+     - CISM  
+     - GSEC  
+     - GPEN  
+     - GWAPT  
+   - *Expert*  
+     - GIAC (various)  
+     - OSCP  
+     - CREST  
+     - CISSP  
+
+5. **Operating Systems**  
+   - Windows, Linux, macOS overview  
+   - Installation & Configuration  
+   - Versions & Differences  
+   - GUI vs. CLI navigation  
+   - Permissions model  
+   - Installing software  
+   - CRUD (file operations)  
+   - Troubleshooting & common commands  
+
+6. **Networking Knowledge**  
+   - OSI Model  
+   - Common Protocols & Ports  
+   - SSL/TLS basics  
+   - NAS vs. SAN  
+
+7. **IP Terminology**  
+   - Subnetting fundamentals  
+   - Public vs. Private IPs  
+   - localhost, loopback, CIDR, subnet mask, default gateway  
+
+8. **Core Network Concepts**  
+   - VLAN, DMZ, ARP  
+   - VM, DHCP, DNS, NAT, IP, Router, Switch, VPN  
+   - LAN, WAN, MAN, WLAN  
+
+9. **Network Topologies**  
+   - Star, Ring, Mesh, Bus  
+
+10. **Network Protocols & Services**  
+    - SSH, RDP, FTP, SFTP  
+    - HTTP/HTTPS, SSL/TLS  
+
+11. **Virtualization Technologies**  
+    - VMware, VirtualBox, ESXi, Proxmox  
+    - Hypervisor, HostOS vs. GuestOS vs. VM  
+
+12. **Troubleshooting Tools**  
+    - nslookup, ipconfig, netstat, ping, tracert, dig, arp, route  
+    - Packet sniffers & protocol analyzers (tcpdump, Wireshark)  
+    - Port scanners (nmap)  
+    - iptables, curl, hping  
+    - Forensics tools (FTK Imager, Autopsy, WinHex, memdump)  
+
+13. **Authentication Methodologies**  
+    - Kerberos, LDAP, SSO, RADIUS, Certificates, Local auth  
+    - Authentication vs. Authorization  
+
+14. **Security Skills & Knowledge**  
+    - Hacking tools & exploit frameworks  
+    - Defense‑in‑Depth & runbooks  
+    - Forensics & incident response (prep, ID, containment, eradication, recovery, lessons learned)  
+    - Threat hunting, vulnerability management, reverse engineering  
+    - Pen‑test rules of engagement; perimeter vs. DMZ vs. segmentation  
+    - Zero Trust core concepts  
+    - Compliance, auditors & risk definition  
+    - Backups & resiliency; Cyber Kill Chain  
+    - MFA/2FA, OS hardening & isolation  
+    - IDS/IPS, honeypots; false positives/negatives  
+    - Blue/Red/Purple teams  
+    - Threat intel & OSINT; handshakes; CIA triad; privilege escalation  
+    - Web attacks & OWASP Top 10; malware types  
+
+15. **Cryptography & Frameworks**  
+    - Salting, hashing, key exchange, PKI, public vs. private keys, obfuscation  
+    - MITRE ATT&CK, Kill Chain, Diamond Model  
+
+16. **Standards & Platforms**  
+    - ISO, NIST, RMF, CIS Controls, CSF  
+    - SIEM & SOAR  
+
+17. **Offensive Distros & LOLBAS**  
+    - ParrotOS, Kali Linux, LOLBAS  
+
+18. **Log Analysis**  
+    - Event logs, syslogs, NetFlow, packet captures, firewall logs  
+
+19. **Hardening Techniques**  
+    - MAC‑based, NAC‑based access control; port blocking; sinkholes  
+    - Group Policy, ACLs; patch management  
+    - Jump server, endpoint security  
+
+20. **Secure vs. Unsecure Protocols**  
+    - FTP vs. SFTP; SSL vs. TLS; IPsec; DNSSEC; LDAPS; SRTP; S/MIME  
+
+21. **Security Appliances & Concepts**  
+    - Antivirus/antimalware, EDR, DLP, HIPS, NIDS/NIPS, host firewalls, sandboxing  
+    - EAP vs. PEAP; WPS; WPA/WPA2/WPA3 vs. WEP  
+
+22. **Threat Classification & Tools**  
+    - Zero‑day vs. known; APT  
+    - VirusTotal, Joe Sandbox, Any.run, urlvoid, urlscan, WHOIS  
+
+23. **Social Engineering & Attack Vectors**  
+    - Phishing, whaling, smishing, spam vs. SPIM  
+    - Shoulder surfing, dumpster diving, tailgating  
+    - Reconnaissance, impersonation, watering‑hole, drive‑by, typo‑squatting  
+    - Brute‑force vs. password spray  
+
+24. **Network & Application Attacks**  
+    - DoS vs. DDoS; MITM; spoofing; evil twin; DNS poisoning; deauth; VLAN hopping; rogue AP  
+    - Buffer overflow; memory leak; XSS; SQLi; CSRF; replay; pass‑the‑hash; directory traversal  
+
+25. **Stakeholders & Communication**  
+    - Audience: IT, HR, legal, compliance, management  
+
+26. **Cloud Security**  
+    - Cloud vs. on‑prem differences; IaC; serverless; SaaS/PaaS/IaaS  
+    - Models: public, private, hybrid; AWS, GCP, Azure  
+    - Cloud storage: S3, Dropbox, Box, OneDrive, Google Drive, iCloud  
+
+27. **Programming & Scripting**  
+    - Python, Go, JavaScript, C++, Bash, PowerShell  
+
+28. **Keep Learning**  
+    - GTFOBins, WADComs  
