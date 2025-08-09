@@ -1,1 +1,1 @@
-web: gunicorn CareerPath.app:app
+web: gunicorn app:app
